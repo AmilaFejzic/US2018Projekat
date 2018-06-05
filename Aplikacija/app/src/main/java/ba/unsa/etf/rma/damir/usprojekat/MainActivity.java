@@ -148,15 +148,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void turnOnOffWifi(Context context, boolean isTurnToOn) {
-        wifiManager = (WifiManager) context
-                .getSystemService(Context.WIFI_SERVICE);
+        wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         wifiManager.setWifiEnabled(isTurnToOn);
     }
 
     //slanje na WiFi modul
     public class Client implements Runnable{
         private final static String SERVER_ADDRESS = "192.168.4.1";
-        private final static int SERVER_PORT = 8888;
+        private final static int SERVER_PORT = 80 ;
 
 
         public void run(){
@@ -181,5 +180,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
+    }
+    //192.168.4.
+    private String nadjiAdresu(String subnet){
+
+
+        for(int i=0; i<255; i++){
+            //dobavi podatke ?
+            subnet += i+"";
+
+        }
+        return subnet;
     }
 }
