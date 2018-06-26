@@ -3,8 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="crvena">#FF0000</color>
-    <color name="zelena">#00FF00</color>
-    <color name="plava">#0000FF</color>
+    <color name="crvena">#c10606</color>
+    <color name="zelena">#04ac04</color>
+    <color name="plava">#040499</color>
     <color name="bijela">#FFFFFF</color>
+    <color name="ljubicasta">#7517ac</color>
+    <color name="zuta">#c4c708</color>
+    <color name="cyan">#03a98b</color>
+
+
+
+
 </resources>

@@ -31,6 +31,7 @@ public class LEDControl extends Activity {
     Button yellowLED ;
     Button cyanLED;
     Button whiteLED;
+  //  Button buzzer;
     char poruka ;
     TextView obavjestenje;
     boolean red=false;
@@ -51,11 +52,12 @@ public class LEDControl extends Activity {
         cyanLED = (Button)findViewById(R.id.cyanLED);
         whiteLED = (Button)findViewById(R.id.whiteLED);
         obavjestenje = (TextView)findViewById(R.id.obavjestenje);
+   //     buzzer = (Button)findViewById(R.id.buzzer);
 
         if(veza == null)
             obavjestenje.setVisibility(View.GONE);
 
-        //mozemo traziti na  mrezi uredjaj sa odgovarajucom mac adresom --aiz arp kesa ili ovo probati
+
 
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -195,7 +197,7 @@ public class LEDControl extends Activity {
 
             }
         });
-        whiteLED.setOnClickListener(new View.OnClickListener() {
+         whiteLED.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //     connect.performClick();
@@ -208,8 +210,33 @@ public class LEDControl extends Activity {
 
             }
         });
+        purpleLED.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //     connect.performClick();
+                if(veza != null ){
+                    poruka = '8';
+                    posaljiKomandu();
+                    //   pw.println("2");
+                    //  pw.flush();
+                }
+
+            }
+        });
+     /*   buzzer.setOnClickListener(new View.OnClickListener() {
+                                      @Override
+                                      public void onClick(View v) {
+                                          if(veza != null){
+                                              poruka = '9';
+                                              posaljiKomandu();
+                                          }
+                                      }
+                                  }
+
+        );
 
 
+*/
 
 
     }
